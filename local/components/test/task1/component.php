@@ -10,11 +10,12 @@
  * @param CBitrixComponent $this
  */
  
-$arParams["IBLOCK_ID"] = 1;
-$getName = $_GET["name"];
- 
 if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true) die();
 if(!CModule::IncludeModule("iblock")) die();
+
+$getName = $_GET["name"];
+if(!$arParams["IBLOCK_ID"]) die("IBLOCK_ID not set");
+//$arParams["IBLOCK_ID"] = 1;
 
 if ($this->StartResultCache(false, $getName)) //возможно, второй параметр избыточен
 {

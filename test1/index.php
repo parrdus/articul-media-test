@@ -5,6 +5,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	"test:task1", 
 	"", 
 	array(
+		"IBLOCK_ID"=>1
 	),
 	false
 );?>
